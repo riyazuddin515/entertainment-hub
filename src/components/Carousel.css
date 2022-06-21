@@ -1,0 +1,12 @@
+.carousel_item{
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+}
+.carousel_item img{
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.carousel_item b{
+    text-align: center;
+}

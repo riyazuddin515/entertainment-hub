@@ -19,7 +19,9 @@ const Carousel = ({ mediaType, id }) => {
 
     const items = credit.map(c => (
         <div className="carousel_item">
-            <img src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
+            <img
+                src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
+                alt={c?.name}
                 onDragStart={handleDragStart}
                 role="presentation" />
             <b>{c.name}</b>
@@ -28,6 +30,7 @@ const Carousel = ({ mediaType, id }) => {
 
     useEffect(() => {
         fetch()
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {

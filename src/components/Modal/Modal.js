@@ -1,4 +1,4 @@
-import { Badge, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import axios from 'axios';
@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom';
 import { img_500, unavailable } from '../../Config/config'
 import './Modal.css'
 import Carousel from '../Carousel';
-import MailIcon from '@material-ui/icons/Mail';
 
 const b = {
     position: 'fixed',
@@ -43,6 +42,7 @@ const Modal = ({ open, setOpen, mediaType, id, children }) => {
             fetch()
             fetchVideo()
         }
+        // eslint-disable-next-line
     }, [open])
 
     if (!open) {

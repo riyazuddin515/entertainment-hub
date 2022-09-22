@@ -1,5 +1,7 @@
 # 🎞️Entertainment Hub🎬
 
+## Preview: https://entertainment-hub-r515.netlify.app
+
 ### Treading Screen
 
 <img src="./screens/Home Screen.png" width='500' height='250'>

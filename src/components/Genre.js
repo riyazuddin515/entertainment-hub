@@ -19,9 +19,7 @@ const Genre = ({
 
     useEffect(() => {
         fetchGenre()
-        return () => {
-            setGenres([])
-        }
+        // eslint-disable-next-line 
     }, [])
 
     const handleAdd = (genre) => {

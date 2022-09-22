@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './SingleItem.css'
 import { img_300 } from '../../Config/config'
 import Modal from '../Modal/Modal';

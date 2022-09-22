@@ -23,14 +23,13 @@ const Search = () => {
             return
         const response = await axios(`https://api.themoviedb.org/3/search/${type}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchInput}&page=${currentPage}&include_adult=false`)
         setContent(response?.data?.results)
-        // console.log(response?.data?.results)
         setTotalPages(response?.data?.total_pages)
-        // console.log(response?.data?.total_pages)
     }
 
     useEffect(() => {
         window.scroll(0, 0)
         search()
+        // eslint-disable-next-line
     }, [currentPage])
 
     return (

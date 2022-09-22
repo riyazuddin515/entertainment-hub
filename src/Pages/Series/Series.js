@@ -16,14 +16,15 @@ const Series = () => {
 
     const genreForUrl = useGenre(selectedGenres)
 
-    const fetch = async () => {
-        const { data } = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currentPage}&with_watch_monetization_types=flatrate&with_genres=${genreForUrl}`)
-        setContent(data.results)
-        setTotalPages(data.total_pages)
-        window.scroll(0, 0)
-    }
+
 
     useEffect(() => {
+        const fetch = async () => {
+            const { data } = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currentPage}&with_watch_monetization_types=flatrate&with_genres=${genreForUrl}`)
+            setContent(data.results)
+            setTotalPages(data.total_pages)
+            window.scroll(0, 0)
+        }
         fetch()
     }, [currentPage, genreForUrl])
 

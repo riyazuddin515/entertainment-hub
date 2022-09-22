@@ -10,15 +10,14 @@ const Trending = () => {
     const [totalPages, setTotalPages] = useState(1)
     const [currentPage, setCurrentPage] = useState(1)
 
-    const fetch = async () => {
-        const { data } = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${currentPage}`)
-        console.log(data)
-        setContent(data.results)
-        setTotalPages(data.total_pages)
-        window.scroll(0, 0)
-    }
-
     useEffect(() => {
+        const fetch = async () => {
+            const { data } = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${currentPage}`)
+            console.log(data)
+            setContent(data.results)
+            setTotalPages(data.total_pages)
+            window.scroll(0, 0)
+        }
         fetch()
     }, [currentPage])
 
